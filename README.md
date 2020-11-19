@@ -6,7 +6,7 @@
 ## Adaptacion & upgrades:
 ### FacuFalcone - CaidevOficial [Java].
 
-<a href="https://github.com/caidevOficial/CUViLo_Java">
+<a href="https://github.com/caidevOficial/StructureBuilder_forC">
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=caidevOficial&show_icons=true&theme=tokyonight" />
 </a></br></br>
 
@@ -20,7 +20,7 @@ private static String StartCourse(){
 ## First step:
 1 - Download and Install java from: [JAVA](https://www.oracle.com/technetwork/es/java/javase/downloads/index.html/)
 
-2 - You can download the las release from: [Releases](Release)
+2 - You can download the las release from: [Releases](https://github.com/caidevOficial/StructureBuilder_forC/releases)
 
 ## Then:
 ## For windows users: 

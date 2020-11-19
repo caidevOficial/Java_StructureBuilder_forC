@@ -1,4 +1,3 @@
-<!-- <td><a href="https://www.vicentelopez.gov.ar/centrouniversitariovl/" target="_blank"><img alt="Centro Universitario Vicente López" src="https://github.com/caidevOficial/Logos/blob/master/Instituciones/logo-cuv.png" width="310px" height="97px" /></td></br> -->
 
 # Structure Builder for C [Coded in Java].
 ## Autor:
@@ -16,16 +15,16 @@ private static String StartCourse(){
 	return message;
 }
 ```
-# How to run it:
-## First step:
+# How to run it: ⤵️
+## First step: ⤵️
 1 - Download and Install java from: [JAVA](https://www.oracle.com/technetwork/es/java/javase/downloads/index.html/)
 
 2 - You can download the last release from: [Releases](https://github.com/caidevOficial/StructureBuilder_forC/releases)
 
-## Then:
-## For windows users: 
+## Then: ⤵️
+## For windows users: 👨‍💻 👩‍💻
 Just double-click on the 'CLICK-ME.bat' file in order to execute the '.jar' file.
-## For Linux users:
+## For Linux users: 👨‍💻 👩‍💻
 Open you terminal in the directory of the '.jar' file and write:
 
 ```
@@ -35,7 +34,7 @@ java -jar StructureBuilder_forC_[V_1.0.1].jar
 Once executed, the program will ask you to write the name of the structure, an alias to use in the comparison functions, getters and setters, as well as the names and types of parameters of the structure (could be one parameter or more of them ).
 Finally, it will create a file with extension '.C' where you will have the necessary functions for the structure as well as a file with extension '.H' with the headers of these functions.
 
-## Advice:
+## Advice: ⚠️
 You need to have a LinkedList library to avoid errors in imports (Not included in this software).
 
 ## Technologies used. 📌

@@ -1,7 +1,7 @@
 
 # Structure Builder for C [Coded in Java].
 ## Autor:
-### Santiago Herrera Burgos [Lenguaje C].
+### Santiago Herrera Burgos [C Language].
 ## Adaptation & Upgrades:
 ### FacuFalcone - CaidevOficial [Java].
 

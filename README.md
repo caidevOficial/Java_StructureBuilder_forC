@@ -23,9 +23,9 @@ private static String StartCourse(){
 
 ## Then: ⤵️
 ## For windows users: 👨‍💻 👩‍💻
-Just double-click on the 'CLICK-ME.bat' file in order to execute the '.jar' file.
+➡️ Just double-click on the 'CLICK-ME.bat' file in order to execute the '.jar' file.
 ## For Linux users: 👨‍💻 👩‍💻
-Open you terminal in the directory of the '.jar' file and write:
+➡️ Open you terminal in the directory of the '.jar' file and write:
 
 ```
 java -jar StructureBuilder_forC_[V_1.0.1].jar
@@ -35,7 +35,7 @@ Once executed, the program will ask you to write the name of the structure, an a
 Finally, it will create a file with extension '.C' where you will have the necessary functions for the structure as well as a file with extension '.H' with the headers of these functions.
 
 ## Advice: ⚠️
-You need to have a LinkedList library to avoid errors in imports (Not included in this software).
+➡️ You need to have a LinkedList library to avoid errors in imports (Not included in this software).
 
 ## Technologies used. 📌
 <!-- Java -->

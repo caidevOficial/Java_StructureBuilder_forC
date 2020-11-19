@@ -20,7 +20,7 @@ private static String StartCourse(){
 ## First step:
 1 - Download and Install java from: [JAVA](https://www.oracle.com/technetwork/es/java/javase/downloads/index.html/)
 
-2 - You can download the las release from: [Releases](https://github.com/caidevOficial/StructureBuilder_forC/releases)
+2 - You can download the last release from: [Releases](https://github.com/caidevOficial/StructureBuilder_forC/releases)
 
 ## Then:
 ## For windows users: 

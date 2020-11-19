@@ -19,6 +19,7 @@ private static String StartCourse(){
 # How to run it:
 ## First step:
 1 - Download and Install java from: [JAVA](https://www.oracle.com/technetwork/es/java/javase/downloads/index.html/)
+
 2 - You can download the las release from: [Releases](Release)
 
 ## Then:

@@ -28,7 +28,7 @@ private static String StartCourse(){
 ➡️ Open you terminal in the directory of the '.jar' file and write:
 
 ```
-java -jar StructureBuilder_forC_[V_1.0.1].jar
+java -jar StructureBuilder_forC_[V_1.0.11].jar
 ```
 
 Once executed, the program will ask you to write the name of the structure, an alias to use in the comparison functions, getters and setters, as well as the names and types of parameters of the structure (could be one parameter or more of them ).

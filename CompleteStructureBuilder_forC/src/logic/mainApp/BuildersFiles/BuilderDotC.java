@@ -282,6 +282,7 @@ public class BuilderDotC {
      */
     public static void createShowEntity(LinkedList<Parameter> parameterList, Parameter paramA, PrintWriter pw, String auxStrName, String strName, String strShort) {
 	pw.printf("void %s_show(%s* %s)\173\n", strShort, strName, auxStrName); // void usr_show(sUser* user)
+	//FIXME agregar auxiliares para los getters
 	pw.printf("    if(%s!=NULL)\173\n", auxStrName);
 	pw.printf("        printf(\"");
 	int paramLen = parameterList.size();
@@ -304,6 +305,7 @@ public class BuilderDotC {
 		pw.printf("\134n\"");
 		for (int j = 0; j < paramLen; j++) {
 		    paramA = (Parameter) parameterList.get(j);
+		    //FIXME arreglar para usar getters en esta seccion.
 		    pw.printf(",%s->%s", strName, paramA.getParameterName());
 		}
 		pw.printf(");\n");

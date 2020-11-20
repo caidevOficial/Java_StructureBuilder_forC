@@ -202,9 +202,9 @@ public class BuilderDotH {
 	for (int i = 0; i < paramLen; i++) {
 	    paramA = (Parameter) parameterList.get(i);
 	    if (paramA.getLength() == 1) {
-		pw.printf("%s %s", paramA.getParameterType(), paramA.getParameterShort());
+		pw.printf("%s %s", paramA.getParameterType(), paramA.getParameterName());
 	    } else {
-		pw.printf("%s* %s", paramA.getParameterType(), paramA.getParameterShort());
+		pw.printf("%s* %s", paramA.getParameterType(), paramA.getParameterName());
 	    }
 	    if (paramLen - 1 != i) {
 		pw.printf(", ");

@@ -34,7 +34,7 @@ import logic.mainApp.BuildersFiles.BuilderDotH;
 /**
  * @author <FacuFalcone - CaidevOficial>.
  */
-public class MainClass {
+public class MainExec {
 
     // Attributes.
     static Scanner myScanner = new Scanner(System.in);
@@ -156,7 +156,7 @@ public class MainClass {
 	    Steart.progHeader("Struct DotH DotC Builder");
 	    Steart.subHeader("Step 1: Name of the Struct");
 	    System.out.printf("\nName of the Struct: %s\nWrite a Short Name for the Structure to make a better Get&Set [max 5chars]: ", strName);
-	    shortName = MainClass.myScanner.next();
+	    shortName = MainExec.myScanner.next();
 	    shortName = firstCharUpper(shortName.substring(0, validateLengthString(lengthAlias, shortName)));
 	} while (!validateAnswer("Are you sure? [y/n]: "));
 
@@ -291,7 +291,7 @@ public class MainClass {
 		System.out.println("----------------------------");
 	    }
 	    // Valido que este todo correcto
-	} while (!MainClass.validateAnswer("Is it OK? [y/n]: "));
+	} while (!MainExec.validateAnswer("Is it OK? [y/n]: "));
     }
 
     /**

@@ -1,8 +1,8 @@
 /*
- * Copyright (C) 2020 FacuFalcone - CaidevOficial.
+ * Copyright (C) 2021 <FacuFalcone - CaidevOficial>.
  * 
  * Author in C: Santiago Herrera.
- * Adaptation in Java: FacuFalcone - CaidevOficial.
+ * Adaptation in Java: <FacuFalcone - CaidevOficial>.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -29,8 +29,7 @@ import logic.Structures.SubClasses.Parameter;
 import logic.consoleUI.Steart;
 
 /**
- * @author CaidevOficial
- *
+ * @author <FacuFalcone - CaidevOficial>
  */
 public class BuilderDotC {
 
@@ -108,17 +107,17 @@ public class BuilderDotC {
 	pw.printf("int %s_compare%s(void* %s1, void* %s2)\173\n", strShort, paramA.getParameterShort(), strName.toLowerCase(), strName.toLowerCase());
 	pw.printf("    int anw = 0;\n");
 	// primer variable
-	pw.printf("    %s %s1;\n", paramA.getParameterType(), paramA.getParameterName());
+	pw.printf("    %s %s1_1;\n", paramA.getParameterType(), paramA.getParameterName());
 	// segunda variable
-	pw.printf("    %s %s2;\n\n", paramA.getParameterType(), paramA.getParameterName());
+	pw.printf("    %s %s2_2;\n\n", paramA.getParameterType(), paramA.getParameterName());
 	// primer getter
-	pw.printf("    %s_get%s(%s1, &%s1);\n", strShort, paramA.getParameterShort(), strName.toLowerCase(), paramA.getParameterName());
+	pw.printf("    %s_get%s(%s1, &%s1_1);\n", strShort, paramA.getParameterShort(), strName.toLowerCase(), paramA.getParameterName());
 	// segundo getter
-	pw.printf("    %s_get%s(%s2, &%s2);\n\n", strShort, paramA.getParameterShort(), strName.toLowerCase(), paramA.getParameterName());
+	pw.printf("    %s_get%s(%s2, &%s2_2);\n\n", strShort, paramA.getParameterShort(), strName.toLowerCase(), paramA.getParameterName());
 	// Seccion comparador
-	pw.printf("    if(%s1>%s2)\173\n", paramA.getParameterName(), paramA.getParameterName());
+	pw.printf("    if(%s1_1>%s2_2)\173\n", paramA.getParameterName(), paramA.getParameterName());
 	pw.printf("        anw=1;\n    \175\n");
-	pw.printf("    else if(%s1<%s2)\173\n", paramA.getParameterName(), paramA.getParameterName());
+	pw.printf("    else if(%s1_1<%s2_2)\173\n", paramA.getParameterName(), paramA.getParameterName());
 	pw.printf("        anw=-1;\n    \175\n");
 	pw.printf("    return anw;\n\175\n\n");
     }
@@ -135,14 +134,14 @@ public class BuilderDotC {
 	pw.printf("int %s_compare%s(void* %s1, void* %s2)\173\n", strShort, paramA.getParameterShort(), strName.toLowerCase(), strName.toLowerCase());
 	pw.printf("    int anw;\n");
 	// primer variable
-	pw.printf("    %s %s1[%d];\n", paramA.getParameterType(), paramA.getParameterName(), paramA.getLength());
+	pw.printf("    %s %s1_1[%d];\n", paramA.getParameterType(), paramA.getParameterName(), paramA.getLength());
 	// segunda variable
-	pw.printf("    %s %s2[%d];\n\n", paramA.getParameterType(), paramA.getParameterName(), paramA.getLength());
+	pw.printf("    %s %s2_2[%d];\n\n", paramA.getParameterType(), paramA.getParameterName(), paramA.getLength());
 	// primer getter
-	pw.printf("    %s_get%s(%s1, %s1);\n", strShort, paramA.getParameterShort(), strName.toLowerCase(), paramA.getParameterName());
+	pw.printf("    %s_get%s(%s1, %s1_1);\n", strShort, paramA.getParameterShort(), strName.toLowerCase(), paramA.getParameterName());
 	// segundo getter
-	pw.printf("    %s_get%s(%s2, %s2);\n\n", strShort, paramA.getParameterShort(), strName.toLowerCase(), paramA.getParameterName());
-	pw.printf("    anw = strcmp(%s1,%s2);\n", paramA.getParameterName(), paramA.getParameterName());
+	pw.printf("    %s_get%s(%s2, %s2_2);\n\n", strShort, paramA.getParameterShort(), strName.toLowerCase(), paramA.getParameterName());
+	pw.printf("    anw = strcmp(%s1_1,%s2_2);\n", paramA.getParameterName(), paramA.getParameterName());
 	pw.printf("    return anw;\n\175\n\n");
     }
 
@@ -281,38 +280,70 @@ public class BuilderDotC {
      * @param strShort Short name of the structure.
      */
     public static void createShowEntity(LinkedList<Parameter> parameterList, Parameter paramA, PrintWriter pw, String auxStrName, String strName, String strShort) {
+	String paramName = "";
+	String paramType = "";
+	int paramLength = 0;
+	
 	pw.printf("void %s_show(%s* %s)\173\n", strShort, strName, auxStrName); // void usr_show(sUser* user)
 	//FIXME agregar auxiliares para los getters
-	pw.printf("    if(%s!=NULL)\173\n", auxStrName);
-	pw.printf("        printf(\"");
 	int paramLen = parameterList.size();
 	for (int i = 0; i < paramLen; i++) {
 	    paramA = (Parameter) parameterList.get(i);
-	    if (paramA.getParameterType().equals("char")) {
+	    // Case CHAR
+	    paramType = paramA.getParameterType();
+	    paramName = paramA.getParameterName();
+	    
+	    // recorrer 1 vez para variables auxiliares.
+	    pw.printf(paramType + " " + paramName);
+	    if(paramType.equals("char")) {
+		paramLength = paramA.getLength();
+		pw.printf("["+paramLength+"]");
+	    }
+	    pw.printf(";\n");
+	}
+	pw.printf("\n");
+	
+	// Recorrer por segunda vez para hacer los getters.
+	for (Parameter parameter : parameterList) {
+	    if(parameter.getParameterType().equals("char")) {
+		pw.printf("%s_get%s(%s, %s);\n", strShort, parameter.getParameterShort(), auxStrName, parameter.getParameterName());
+	    }else {
+		pw.printf("%s_get%s(%s, &%s);\n", strShort, parameter.getParameterShort(), auxStrName, parameter.getParameterName());		
+	    }
+	}
+	pw.printf("\n");
+	
+	pw.printf("    if(%s!=NULL)\173\n", auxStrName);
+	pw.printf("        printf(\"");
+	for (Parameter parameter : parameterList) {
+	    if (parameter.getParameterType().equals("char")) {
 		pw.printf("%%s");
-	    } else if (paramA.getParameterType().equals("int")) {
+		//CASE INT
+	    } else if (parameter.getParameterType().equals("int")) {
 		pw.printf("%%d");
-	    } else if (paramA.getParameterType().equals("short short int")) {
+		//CASE SHORT SHORT INT
+	    } else if (parameter.getParameterType().equals("short short int")) {
 		pw.printf("%%h2d");
-	    } else if (paramA.getParameterType().equals("long long int")) {
+		//CASE LONG LONG INT
+	    } else if (parameter.getParameterType().equals("long long int")) {
 		pw.printf("%%l2d");
-	    } else if (paramA.getParameterType().equals("float")) {
+		//CASE FLOAT
+	    } else if (parameter.getParameterType().equals("float")) {
 		pw.printf("%%f");
 	    }
-	    if (paramLen - 1 != i) {
+	    
+	    if (parameterList.indexOf(parameter) != (parameterList.size()-1)) {
 		pw.printf("|");
 	    } else {
 		pw.printf("\134n\"");
-		for (int j = 0; j < paramLen; j++) {
-		    paramA = (Parameter) parameterList.get(j);
-		    //FIXME arreglar para usar getters en esta seccion.
-		    pw.printf(",%s->%s", strName, paramA.getParameterName());
+		for (Parameter thisParameter : parameterList) {
+		    pw.printf(",%s", thisParameter.getParameterName());
 		}
+		
 		pw.printf(");\n");
 	    }
 	}
 	pw.printf("        printf(\"-\134n\");\n    \175\n\175\n\n");
-
     }
 
     /**

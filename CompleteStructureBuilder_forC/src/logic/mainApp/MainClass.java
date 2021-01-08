@@ -1,8 +1,8 @@
 /*
- * Copyright (C) 2020 FacuFalcone - CaidevOficial.
+ * Copyright (C) 2021 <FacuFalcone - CaidevOficial>.
  * 
  * Author in C: Santiago Herrera.
- * Adaptation in Java: FacuFalcone - CaidevOficial.
+ * Adaptation in Java: <FacuFalcone - CaidevOficial>.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -32,8 +32,7 @@ import logic.mainApp.BuildersFiles.BuilderDotC;
 import logic.mainApp.BuildersFiles.BuilderDotH;
 
 /**
- * @author CaidevOficial.
- *
+ * @author <FacuFalcone - CaidevOficial>.
  */
 public class MainClass {
 

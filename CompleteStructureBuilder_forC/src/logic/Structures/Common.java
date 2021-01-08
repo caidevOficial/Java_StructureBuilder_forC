@@ -1,8 +1,8 @@
 /*
- * Copyright (C) 2020 FacuFalcone - CaidevOficial.
+ * Copyright (C) 2021 <FacuFalcone - CaidevOficial>.
  * 
  * Author in C: Santiago Herrera.
- * Adaptation in Java: FacuFalcone - CaidevOficial.
+ * Adaptation in Java: <FacuFalcone - CaidevOficial>.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -21,8 +21,7 @@
 package logic.Structures;
 
 /**
- * @author CaidevOficial
- *
+ * @author <FacuFalcone - CaidevOficial>
  */
 public class Common {
 
@@ -35,9 +34,7 @@ public class Common {
      * Builds the entity with default params.
      */
     public Common() {
-	this.id = 0;
-	this.parameterName = "";
-	this.parameterType = "";
+	
     }
 
     /**

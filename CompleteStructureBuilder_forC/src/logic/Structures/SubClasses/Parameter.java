@@ -1,8 +1,8 @@
 /*
- * Copyright (C) 2020 FacuFalcone - CaidevOficial.
+ * Copyright (C) 2021 <FacuFalcone - CaidevOficial>.
  * 
  * Author in C: Santiago Herrera.
- * Adaptation in Java: FacuFalcone - CaidevOficial.
+ * Adaptation in Java: <FacuFalcone - CaidevOficial>.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -21,8 +21,7 @@
 package logic.Structures.SubClasses;
 
 /**
- * @author CaidevOficial
- *
+ * @author <FacuFalcone - CaidevOficial>
  */
 public class Parameter extends Checker {
 
@@ -33,8 +32,7 @@ public class Parameter extends Checker {
      * Builds the parameter with default values.
      */
     public Parameter() {
-	super();
-	this.parameterShort = "";
+
     }
 
     /**

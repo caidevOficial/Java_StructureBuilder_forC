@@ -11,10 +11,10 @@
 </br>
   
 # Structure Builder for C [Coded in Java].
-## Autor:
-### Santiago Herrera Burgos [C Language].
-## Adaptation & Upgrades:
+## Advanced improvement and development:
 ### FacuFalcone - CaidevOficial [Java].
+### Idea:
+#### Santiago Herrera Burgos [C Language].
 
 <a href="https://github.com/caidevOficial/StructureBuilder_forC">
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=caidevOficial&show_icons=true&theme=tokyonight&count_private=true" />
